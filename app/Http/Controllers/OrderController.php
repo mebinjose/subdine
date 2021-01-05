@@ -18,9 +18,9 @@ class OrderController extends Controller
             if(Dish::where('dish', $request->dish)->where('available', '>', 0)->exists()){
                 $dish = Dish::where('dish', $request->dish)->first();
             
-                if($dish->available - 1 < config('constants.DISH_MIN_VAL')){
+               // if($dish->available - 1 < config('constants.DISH_MIN_VAL')){
                     $this->sendAlertMail($request->dish);
-                }
+                //}
                 $this->storeStats($dish);
                 $dish->decrement('available');
                 return response()->json(['error' => 'Order placed successfully'], 200);    

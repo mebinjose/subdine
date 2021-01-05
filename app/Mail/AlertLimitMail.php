@@ -20,6 +20,7 @@ class AlertLimitMail extends Mailable
     public function __construct($dish)
     {
         $this->dish = $dish;
+        $this->queue = 'alert-mail';
     }
 
     /**

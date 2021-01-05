@@ -18,6 +18,10 @@
 
 > php artisan db:seed --class=DishSeeder
 
+### queue
+
+> Set up queue `alert-mail` for sending mail 
+
 ## Server setup
 
 > Make host file entry `\Windows\system32\drivers\etc\hosts` as `127.0.0.1      subdine.test`
@@ -118,7 +122,7 @@ DB_PASSWORD=
 
 BROADCAST_DRIVER=log
 CACHE_DRIVER=file
-QUEUE_CONNECTION=sync
+QUEUE_CONNECTION=database
 SESSION_DRIVER=file
 SESSION_LIFETIME=120
 
