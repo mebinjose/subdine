@@ -59,13 +59,18 @@ class OrderController extends Controller
         if($result != 'No data'){
             $min = min($result);
             $max = max($result);
-            $minKey = array_keys($result,$min)[0];
-            $maxKey = array_keys($result,$max)[0];
-            $out = ['minimum' =>[
-                $minKey => $min,
-            ],'maximum' => [
-                $maxKey => $max
-            ]];
+            
+            $minArr = [];
+            foreach(array_keys($result,$min) as $minKey){
+                array_push($minArr, [$minKey => $min]);
+            }
+            $maxArr = [];
+            foreach(array_keys($result,$min) as $maxKey){
+                array_push($maxArr, [$maxKey => $max]);
+            }
+            
+            $out = ['minimum' =>[$minArr],'maximum' => [$maxArr]];
+
             return response()->json(['result' => $out], 200);
         }
         return response()->json(['result' => $result], 200);
