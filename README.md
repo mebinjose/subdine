@@ -159,13 +159,8 @@ CONTACT_EMAIL = contact@subdine.com
 
 # API Endpoints
 
-
-####
-
-API - to receive an order for dishes
-
-|Method | Route | params| Description|
-|:-----: |:----:|:---:|
-|POST   | http://subdine.test/api/order-dish | {"dish": "Meal"} | Place order |
-| GET   | http://subdine.test/api/order-stats/2-days | | Last 2 days sold count |
-| GET   | http://subdine.test/api/order-stats/2-days |  | Last 10 days min and max values | 
+| Method  | Route  | Params | Description |
+| :------------ |:---------------:| -----:|:---------------:|
+| POST     | http://subdine.test/api/order-dish | {"dish": "Meal"} | Place order |
+| GET      | http://subdine.test/api/order-stats/2-days       |   | Last 2 days sold count |
+| GET | http://subdine.test/api/order-stats/10-days        |    | Last 10 days min and max values |
