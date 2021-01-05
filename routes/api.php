@@ -17,11 +17,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('api')->get('/user', function (Request $request) {
-    return $request->user();
-});
-Route::post('/register', [RegisteredUserController::class, 'register']);
-Route::post('/login', [AuthenticatedSessionController::class, 'login']);
 Route::group([],function () {
     Route::post('order-dish', ['uses' => 'App\Http\Controllers\OrderController@order']);
     Route::get('order-stats/2-days', ['uses' => 'App\Http\Controllers\OrderController@lastTwoDayStats']);
