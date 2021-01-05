@@ -2,7 +2,7 @@
 
 ## Root Directory
 
-> Create and Update env from Reademe file
+> Create and Update env from Readme file
 
 > Create Db and update credentials
 
